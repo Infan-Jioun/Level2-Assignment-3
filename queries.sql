@@ -48,7 +48,7 @@ INSERT INTO bookings VALUES
 (2, 1, 2, '2023-11-01', '2023-11-03', 'completed', 120),
 (3, 3, 2, '2023-12-01', '2023-12-02', 'confirmed', 60),
 (4, 1, 1, '2023-12-10', '2023-12-12', 'pending', 100);
--- Query 1: JOIN
+-- Query 1: 
 SELECT
     bookings.booking_id,
     users.name AS customer_name,
