@@ -1,21 +1,21 @@
 -- Users Table
 CREATE TABLE users (
     user_id INTEGER PRIMARY KEY,
-    name TEXT,
-    email TEXT,
-    phone TEXT,
-    role TEXT
+    name VARCHAR(50),
+    email VARCHAR(50),
+    phone  VARCHAR(50),
+    role VARCHAR(20)
 );
 
 -- Vehicles Table
 CREATE TABLE vehicles (
     vehicle_id INTEGER PRIMARY KEY,
-    name TEXT,
-    type TEXT,
-    model TEXT,
-    registration_number TEXT,
+    name VARCHAR(50),
+    type VARCHAR(50),
+    model VARCHAR(50),
+    registration_number VARCHAR(50),
     rental_price INTEGER,
-    status TEXT
+    status VARCHAR(20)
 );
 
 -- Bookings Table
@@ -25,11 +25,9 @@ CREATE TABLE bookings (
     vehicle_id INTEGER,
     start_date DATE,
     end_date DATE,
-    status TEXT,
+    status VARCHAR(20),
     total_cost INTEGER
 );
-
-
 INSERT INTO users VALUES
 (1, 'Alice', 'alice@example.com', '1234567890', 'Customer'),
 (2, 'Bob', 'bob@example.com', '0987654321', 'Admin'),
@@ -80,3 +78,4 @@ GROUP BY
     vehicles.vehicle_id, vehicles.name
 HAVING
     COUNT(*) > 2;
+
